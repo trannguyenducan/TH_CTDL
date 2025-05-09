@@ -220,7 +220,7 @@ def show_solution_gui(solutions, algo_name):
     tk.Label(left, text=f"Kết quả giải bằng {algo_name}", font=("Arial", 14, "bold")).pack()
 
     for name, _, _, time_used, mem_used, bt_count in solutions:
-        tk.Label(left, text=f"Mức độ: {name}\nThời gian: {time_used:.4f}s\nBộ nhớ: {mem_used:.2f}MB\nBacktrack: {bt_count}\n", justify='left', anchor="w").pack(anchor='w')
+        tk.Label(left, text=f"Mức độ: {name}\nThời gian: {time_used:.4f}s\nBộ nhớ: {mem_used:.6f}MB\nBacktrack: {bt_count}\n", justify='left', anchor="w").pack(anchor='w')
 
     for idx, (level, original, solved, *_ ) in enumerate(solutions):
         frame = tk.LabelFrame(right, text=level, padx=2, pady=2)
